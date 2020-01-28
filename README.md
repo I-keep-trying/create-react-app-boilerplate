@@ -1,0 +1,3 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Easier to clone a boilerplate than doing npx etc...
