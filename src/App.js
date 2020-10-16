@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer, Slide } from 'react-toastify'
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ToastContainer pauseOnFocusLoss={false} autoClose={2000} transition={Slide} />
     </div>
   );
 }
