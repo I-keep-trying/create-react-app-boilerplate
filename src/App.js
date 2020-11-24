@@ -1,28 +1,29 @@
-import React from 'react';
+import React from 'react'
+import Desktop from './components/DesktopContainer'
+import Mobile from './components/MobileContainer'
+import Footer from './components/Footer'
+import { MediaContextProvider, Media } from './Media'
 import { ToastContainer, Slide } from 'react-toastify'
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <ToastContainer pauseOnFocusLoss={false} autoClose={2000} transition={Slide} />
-    </div>
-  );
-}
 
-export default App;
+const App = () => (
+  <MediaContextProvider>
+    <ToastContainer
+      pauseOnFocusLoss={false}
+      autoClose={2000}
+      transition={Slide}
+    />
+    <Media lessThan="lg">
+      <Mobile />
+    </Media>
+    {/*     <Media at="md">
+      <TabletApp />
+    </Media> */}
+    <Media greaterThanOrEqual="lg">
+      <Desktop />
+    </Media>
+    <Footer />
+  </MediaContextProvider>
+)
+
+export default App

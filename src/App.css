@@ -100,7 +100,7 @@ label {
   width: 100px;
 }
 
-a {
+/* a {
   color: #060b56;
   text-decoration: none;
 }
@@ -117,10 +117,10 @@ a:visited {
 
 a:visited:hover {
   color: blue;
-}
+} */
 
 .image {
-  width: 50%;
+  width: 100%;
 }
 
 li {
