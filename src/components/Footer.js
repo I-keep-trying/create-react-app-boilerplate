@@ -3,7 +3,7 @@ import { List, Icon } from 'semantic-ui-react'
 
 function Footer() {
   return (
-    <div class="ui inverted bottom fixed fluid three item menu">
+    <div className="ui inverted bottom fixed fluid three item menu">
       <List.Item>About Us</List.Item>
       <List.Item>
         <a
